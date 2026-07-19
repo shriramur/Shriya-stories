@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>கதாபாத்திரங்கள் — Shriya's Story World</title>
+<meta name="description" content="ஸ்ரேயாவின் கதை உலகின் கதாபாத்திரங்கள் — Meet the characters from Shriya's Story World.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>🌈</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;600;700;800&family=Mukta+Malar:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b2320; --paper:#fffdf6;
+    --sun:#ffc93c; --leaf:#5aa03c;
+    --water:#2f8fd6; --deepwater:#1b5e97;
+    --clay:#c96f3b; --pink:#ff8fb1;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Mukta Malar',sans-serif;color:var(--ink);line-height:1.7;
+    background:linear-gradient(180deg,#aee3f5 0%,#e7f7ec 22%,#fffdf6 46%);
+    background-attachment:fixed;
+    min-height:100vh;
+  }
+  h1,h2,h3,.badge{font-family:'Baloo Thambi 2',cursive}
+
+  .home-btn{
+    position:fixed;top:14px;right:14px;z-index:50;
+    display:inline-flex;align-items:center;justify-content:center;
+    width:48px;height:48px;border-radius:50%;background:#fff;color:var(--deepwater);
+    text-decoration:none;font-size:1.35rem;box-shadow:0 4px 12px rgba(0,0,0,.22);
+    transition:transform .1s ease;
+  }
+  .home-btn:active{transform:scale(.92)}
+
+  header{text-align:center;padding:56px 20px 30px}
+  header h1{
+    font-size:clamp(2rem,7vw,3.2rem);font-weight:800;color:var(--deepwater);
+    text-shadow:0 3px 0 #fff;line-height:1.2;
+  }
+  header .en-sub{
+    display:inline-block;margin-top:10px;font-weight:700;color:#3c5a2c;
+    background:#fff;border-radius:999px;padding:6px 20px;box-shadow:0 4px 10px rgba(0,0,0,.1);
+    font-size:1.05rem;
+  }
+  header p.tagline{max-width:520px;margin:20px auto 0;font-size:1.05rem;color:#4a4038}
+
+  main{max-width:1080px;margin:0 auto;padding:10px 20px 70px}
+
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:24px;
+  }
+  .card{
+    background:rgba(255,255,255,.85);border-radius:26px;padding:0 0 22px;
+    box-shadow:0 10px 26px rgba(0,0,0,.12);border:3px solid rgba(0,0,0,.05);
+    overflow:hidden;display:flex;flex-direction:column;text-align:center;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover{transform:translateY(-6px);box-shadow:0 16px 32px rgba(0,0,0,.16)}
+  .portrait{height:190px;display:flex;align-items:center;justify-content:center}
+  .portrait svg{width:150px;height:150px;filter:drop-shadow(0 6px 14px rgba(0,0,0,.15))}
+  .portrait.water{background:linear-gradient(180deg,#bfe9f7 0%,#e6f6d8 100%)}
+  .portrait.unity{background:linear-gradient(180deg,#ffe08a 0%,#ffb87a 100%)}
+  .card-body{padding:16px 20px 0}
+  .card h3{font-size:1.35rem;color:var(--deepwater)}
+  .card .en-name{font-size:.92rem;color:#8a7a5c;font-weight:700;margin-top:2px}
+  .card p.blurb{margin-top:10px;font-size:.96rem;color:#4a4038}
+  .story-chip{
+    display:inline-flex;align-items:center;gap:6px;margin:14px 20px 0;
+    text-decoration:none;font-size:.82rem;font-weight:700;color:#6a5a3c;
+    background:#fff;border-radius:999px;padding:6px 14px;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);align-self:center;
+  }
+
+  footer{text-align:center;padding:30px 20px 50px;color:#6a5a3c;font-size:.95rem}
+  footer .heart{color:#e05a8a}
+
+  .bob-anim{animation:bob 3s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  @media (prefers-reduced-motion:reduce){.bob-anim{animation:none}}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="index.html" aria-label="முகப்புக்குத் திரும்பு">🏠</a>
+
+<header>
+  <h1>கதாபாத்திரங்கள்</h1>
+  <span class="en-sub">Meet the Characters</span>
+  <p class="tagline">ஸ்ரேயாவின் கதை உலகில் வாழும் நண்பர்கள் — the friends who live in Shriya's story world. 🌟</p>
+</header>
+
+<main>
+  <div class="grid">
+
+    <article class="card">
+      <div class="portrait water">
+        <svg class="bob-anim" viewBox="180 80 200 220" role="img" aria-label="சிரிக்கும் நீர்த்துளி">
+          <path d="M280 96 C248 150 224 182 224 216 a56 56 0 0 0 112 0 C336 182 312 150 280 96 Z" fill="#3aa0e0" stroke="#1b5e97" stroke-width="6"/>
+          <ellipse cx="258" cy="200" rx="11" ry="15" fill="#fff" opacity=".5"/>
+          <circle cx="262" cy="216" r="8" fill="#0e2f4d"/><circle cx="298" cy="216" r="8" fill="#0e2f4d"/>
+          <circle cx="259" cy="213" r="2.6" fill="#fff"/><circle cx="295" cy="213" r="2.6" fill="#fff"/>
+          <path d="M262 238 Q280 254 298 238" fill="none" stroke="#0e2f4d" stroke-width="6" stroke-linecap="round"/>
+          <circle cx="248" cy="230" r="6" fill="#ff9d9d" opacity=".7"/><circle cx="312" cy="230" r="6" fill="#ff9d9d" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>நீர்த்துளி</h3>
+        <p class="en-name">The Water Droplet</p>
+        <p class="blurb">தண்ணீரின் மதிப்பை நினைவூட்டும் மகிழ்ச்சியான சிறு துளி. 💧</p>
+      </div>
+      <a class="story-chip" href="stories/value-of-water.html">📖 தண்ணீரின் மதிப்பு</a>
+    </article>
+
+    <article class="card">
+      <div class="portrait water">
+        <svg class="bob-anim" viewBox="225 175 100 135" role="img" aria-label="கை அசைக்கும் விவசாயி">
+          <circle cx="272" cy="200" r="23" fill="#e8a869"/>
+          <path d="M249 192 q23 -21 46 0 l-4 -15 q-19 -13 -38 0 Z" fill="#fff" stroke="#d8d2c2" stroke-width="2"/>
+          <rect x="256" y="223" width="33" height="48" rx="10" fill="#3f8f3f"/>
+          <rect x="252" y="271" width="41" height="27" rx="8" fill="#fff"/>
+          <line x1="258" y1="234" x2="236" y2="254" stroke="#e8a869" stroke-width="9" stroke-linecap="round"/>
+          <line x1="288" y1="232" x2="308" y2="208" stroke="#e8a869" stroke-width="9" stroke-linecap="round"/>
+          <circle cx="310" cy="205" r="6" fill="#e8a869"/>
+          <circle cx="264" cy="197" r="3.5" fill="#2b2320"/><circle cx="280" cy="197" r="3.5" fill="#2b2320"/>
+          <path d="M263 209 q9 8 18 0" stroke="#2b2320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+          <circle cx="258" cy="206" r="4" fill="#ff9d9d" opacity=".6"/><circle cx="286" cy="206" r="4" fill="#ff9d9d" opacity=".6"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>விவசாயி</h3>
+        <p class="en-name">The Farmer</p>
+        <p class="blurb">தண்ணீரை வீணாக்கி, பின் அதன் மதிப்பை உணர்ந்த கதாநாயகன். 🌾</p>
+      </div>
+      <a class="story-chip" href="stories/value-of-water.html">📖 தண்ணீரின் மதிப்பு</a>
+    </article>
+
+    <article class="card">
+      <div class="portrait unity">
+        <svg class="bob-anim" viewBox="-45 -55 90 110" role="img" aria-label="பள்ளிக்குச் செல்லும் ராமு">
+          <rect x="-15" y="-16" width="30" height="32" rx="8" fill="#4a90d9"/>
+          <rect x="-16" y="16" width="32" height="17" rx="6" fill="#2e4a8a"/>
+          <line x1="-8" y1="33" x2="-8" y2="48" stroke="#e8a869" stroke-width="8" stroke-linecap="round"/>
+          <line x1="8" y1="33" x2="8" y2="48" stroke="#e8a869" stroke-width="8" stroke-linecap="round"/>
+          <line x1="14" y1="-8" x2="34" y2="-28" stroke="#e8a869" stroke-width="8" stroke-linecap="round"/>
+          <line x1="-14" y1="-8" x2="-26" y2="8" stroke="#e8a869" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="0" cy="-32" r="16" fill="#e8a869"/>
+          <path d="M-16 -36 a16 16 0 0 1 32 0 l0 -5 a16 11 0 0 0 -32 0 Z" fill="#2b2320"/>
+          <path d="M-6 -47 q2 -6 6 -4" stroke="#2b2320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+          <circle cx="-6" cy="-34" r="2.8" fill="#2b2320"/><circle cx="6" cy="-34" r="2.8" fill="#2b2320"/>
+          <path d="M-7 -26 q7 9 14 0" stroke="#2b2320" stroke-width="3" fill="none" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>ராமு</h3>
+        <p class="en-name">Ramu</p>
+        <p class="blurb">லட்டு பிடிக்கும் சின்ன பையன், ஒற்றுமை யோசனை சொன்ன ஹீரோ. 🎒</p>
+      </div>
+      <a class="story-chip" href="stories/unity-is-strength.html">📖 ஒற்றுமையே உயர்வு</a>
+    </article>
+
+    <article class="card">
+      <div class="portrait unity">
+        <svg class="bob-anim" viewBox="180 110 200 200" role="img" aria-label="சிரிக்கும் லட்டு">
+          <g transform="translate(280 210)">
+            <circle r="74" fill="#f2a13c" stroke="#c97a1e" stroke-width="3"/>
+            <circle cx="-26" cy="-18" r="11.8" fill="#ffd28a"/><circle cx="22" cy="-30" r="10.4" fill="#ffd28a"/>
+            <circle cx="27" cy="22" r="11.8" fill="#ffd28a"/><circle cx="-15" cy="28" r="10.4" fill="#ffd28a"/>
+          </g>
+          <circle cx="256" cy="196" r="9" fill="#2b2320"/><circle cx="304" cy="196" r="9" fill="#2b2320"/>
+          <circle cx="253" cy="193" r="3" fill="#fff"/><circle cx="301" cy="193" r="3" fill="#fff"/>
+          <path d="M254 234 q26 20 52 0" stroke="#2b2320" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <circle cx="238" cy="222" r="7" fill="#ff9d9d" opacity=".7"/><circle cx="322" cy="222" r="7" fill="#ff9d9d" opacity=".7"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>லட்டு</h3>
+        <p class="en-name">The Laddu</p>
+        <p class="blurb">அம்மா செய்யும் சூப்பர் சுவையான இனிப்பு — எல்லோருக்கும் பிடித்தமானது! 🍬</p>
+      </div>
+      <a class="story-chip" href="stories/unity-is-strength.html">📖 ஒற்றுமையே உயர்வு</a>
+    </article>
+
+    <article class="card">
+      <div class="portrait unity">
+        <svg class="bob-anim" viewBox="-55 -45 130 90" role="img" aria-label="குறும்பு எலி">
+          <path d="M30 8 q24 4 28 -14" stroke="#e8a0b4" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <ellipse cx="6" cy="0" rx="26" ry="17" fill="#9aa0ac" stroke="#6c7280" stroke-width="3"/>
+          <circle cx="-18" cy="-6" r="13" fill="#9aa0ac" stroke="#6c7280" stroke-width="3"/>
+          <circle cx="-26" cy="-21" r="9" fill="#9aa0ac" stroke="#6c7280" stroke-width="3"/>
+          <circle cx="-26" cy="-21" r="4.5" fill="#e8a0b4"/>
+          <circle cx="-8" cy="-22" r="9" fill="#9aa0ac" stroke="#6c7280" stroke-width="3"/>
+          <circle cx="-8" cy="-22" r="4.5" fill="#e8a0b4"/>
+          <circle cx="-24" cy="-6" r="2.6" fill="#2b2320"/>
+          <path d="M-26 3 q4 3 8 0" stroke="#5a4a52" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <circle cx="-31" cy="-2" r="3.4" fill="#e87a94"/>
+          <path d="M-32 0 l-10 -3 M-32 2 l-10 3" stroke="#6c7280" stroke-width="1.6" stroke-linecap="round"/>
+          <ellipse cx="2" cy="17" rx="5" ry="3" fill="#6c7280"/><ellipse cx="18" cy="17" rx="5" ry="3" fill="#6c7280"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>குறும்பு எலி</h3>
+        <p class="en-name">The Mischievous Mouse</p>
+        <p class="blurb">லட்டைத் தேடி வீட்டுக்குள் நுழையும் குறும்புக்கார சிறு விருந்தினர். 🐭</p>
+      </div>
+      <a class="story-chip" href="stories/unity-is-strength.html">📖 ஒற்றுமையே உயர்வு</a>
+    </article>
+
+    <article class="card">
+      <div class="portrait unity">
+        <svg class="bob-anim" viewBox="-30 -35 60 55" role="img" aria-label="எறும்பு நண்பன்">
+          <circle cx="10" cy="0" r="7" fill="#7a3b2e"/><circle cx="0" cy="0" r="5" fill="#93472e"/>
+          <circle cx="-8" cy="-2" r="5" fill="#7a3b2e"/><circle cx="-10" cy="-3.4" r="1.4" fill="#fff"/>
+          <path d="M-10 -6 q-4 -6 -8 -7 M-7 -7 q-1 -7 -4 -9" stroke="#7a3b2e" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+          <path d="M-2 4 l-4 7 M3 5 l0 8 M8 4 l5 7" stroke="#7a3b2e" stroke-width="2" stroke-linecap="round"/>
+          <circle cx="-2" cy="-14" r="6" fill="#f2a13c" stroke="#c97a1e" stroke-width="2"/>
+          <path d="M-8 -6 l4 -6 M4 -6 l-4 -6" stroke="#7a3b2e" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <h3>எறும்பு நண்பன்</h3>
+        <p class="en-name">The Ant Friend</p>
+        <p class="blurb">சின்ன உடம்பு, பெரிய தைரியம் — எல்லோரையும் ஒன்று சேர்த்த நண்பன். 🐜</p>
+      </div>
+      <a class="story-chip" href="stories/unity-is-strength.html">📖 ஒற்றுமையே உயர்வு</a>
+    </article>
+
+  </div>
+</main>
+
+<footer>
+  ஸ்ரேயாவின் கற்பனையிலிருந்து, <span class="heart">❤️</span> உடன் செய்யப்பட்டது.
+  <br>Made with <span class="heart">❤️</span> for Shriya.
+</footer>
+
+</body>
+</html>
