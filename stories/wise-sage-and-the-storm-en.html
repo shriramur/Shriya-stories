@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Wise Sage and the Storm — A Picture Story</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@500;600;700;800&family=Mukta+Malar:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#2b2320; --paper:#fffdf6;
+    --moon:#ffe9b8; --leaf:#5aa03c;
+    --storm:#4a5578; --deepstorm:#2c3454;
+    --sage:#e8952f; --deepsage:#a85f1e;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Mukta Malar',sans-serif;color:var(--ink);background:var(--paper);line-height:1.8}
+  h1,h2,.pagenum,.moral-title{font-family:'Baloo Thambi 2',cursive}
+
+  .page{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    padding:32px 18px 48px;position:relative;overflow:hidden}
+  .art{width:min(94vw,560px);height:auto;display:block;margin-bottom:18px;filter:drop-shadow(0 8px 18px rgba(0,0,0,.14))}
+  .text-card{max-width:560px;background:rgba(255,255,255,.93);border-radius:24px;padding:20px 26px;
+    font-size:1.15rem;box-shadow:0 6px 20px rgba(0,0,0,.10);border:3px solid rgba(0,0,0,.06)}
+  .pagenum{position:absolute;top:18px;left:22px;font-size:1.05rem;font-weight:800;background:#fff;
+    border-radius:999px;padding:4px 18px;box-shadow:0 3px 8px rgba(0,0,0,.14)}
+  .hint{position:absolute;bottom:14px;font-size:.85rem;opacity:.65}
+
+  .cover3{background:linear-gradient(180deg,#241a3f 0%,#4a3a72 45%,#7a5a8f 100%)}
+  .cover3 h1{font-size:clamp(2rem,7.5vw,3.4rem);font-weight:800;color:#fff2d0;text-align:center;
+    line-height:1.25;text-shadow:0 3px 0 rgba(0,0,0,.25)}
+  .cover3 .sub{font-size:1.1rem;margin-top:6px;color:#ffd9a0;font-weight:600;text-align:center}
+  .cover3 .dedication{margin-top:16px;background:#fff;border-radius:999px;padding:8px 22px;font-weight:700;
+    color:var(--deepsage);box-shadow:0 4px 10px rgba(0,0,0,.1)}
+  .cover3 .hint{color:#fff}
+
+  .home1{background:linear-gradient(180deg,#bfe9f7 0%,#d7f2c9 65%,#9fd47f 100%)}
+  .storm2{background:linear-gradient(180deg,#2c3454 0%,#4a5578 55%,#6b7398 100%)}
+  .storm2 .text-card{background:rgba(255,255,255,.95)}
+  .mountain3{background:linear-gradient(180deg,#3a2f5c 0%,#5c4a80 55%,#8a76a8 100%)}
+  .mountain3 .text-card{background:rgba(255,255,255,.95)}
+  .tiger4{background:linear-gradient(180deg,#182a1e 0%,#274332 55%,#3d5c3f 100%)}
+  .tiger4 .text-card{background:rgba(255,255,255,.95)}
+  .sunny5{background:linear-gradient(180deg,#aee3f5 0%,#e3f5d0 55%,#ffe9a8 100%)}
+  .moral6{background:linear-gradient(180deg,#e8952f 0%,#f2b45c 60%,#ffd8a0 100%)}
+  .moral6 .text-card{border:4px dashed var(--sage)}
+  .moral-title{font-size:clamp(1.8rem,6vw,2.6rem);color:#fff;font-weight:800;margin-bottom:12px;
+    text-shadow:0 3px 0 rgba(0,0,0,.18)}
+
+  .sunspin{transform-origin:70px 60px;animation:spin 26s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .cloudmove{animation:drift 9s ease-in-out infinite alternate}
+  @keyframes drift{from{transform:translateX(-16px)}to{transform:translateX(16px)}}
+  .stormcloud{animation:stormdrift 4s ease-in-out infinite alternate}
+  @keyframes stormdrift{from{transform:translateX(-22px)}to{transform:translateX(22px)}}
+  .bob{animation:bob 3s ease-in-out infinite}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+  .swaytree{transform-origin:bottom center;animation:sway 5s ease-in-out infinite alternate}
+  @keyframes sway{from{transform:rotate(-2deg)}to{transform:rotate(2deg)}}
+  .windsway{transform-origin:bottom center;animation:windsway 1.4s ease-in-out infinite alternate}
+  @keyframes windsway{from{transform:rotate(-10deg)}to{transform:rotate(10deg)}}
+  .creak{transform-origin:left center;animation:creak 1.8s ease-in-out infinite alternate}
+  @keyframes creak{from{transform:rotate(0deg)}to{transform:rotate(-16deg)}}
+  .flutter{animation:flutter 4.5s ease-in-out infinite alternate}
+  @keyframes flutter{from{transform:translate(0,0) rotate(0deg)}50%{transform:translate(14px,-10px) rotate(20deg)}to{transform:translate(28px,4px) rotate(-10deg)}}
+  .birdfly{animation:birdfly 8s ease-in-out infinite alternate}
+  @keyframes birdfly{from{transform:translateX(-30px)}to{transform:translateX(50px)}}
+  .sparkle{animation:twinkle 1.6s ease-in-out infinite alternate}
+  .sparkle.s2{animation-delay:.5s}.sparkle.s3{animation-delay:1s}
+  @keyframes twinkle{from{opacity:.2;transform:scale(.8)}to{opacity:1;transform:scale(1.15)}}
+  .raindrop{animation:fall 1.1s linear infinite}
+  .raindrop.d2{animation-delay:.35s}.raindrop.d3{animation-delay:.7s}
+  @keyframes fall{from{transform:translateY(-30px);opacity:0}15%{opacity:1}to{transform:translateY(130px);opacity:0}}
+  .prowl{animation:prowl 3.5s ease-in-out infinite}
+  @keyframes prowl{0%,100%{transform:translateX(0)}50%{transform:translateX(24px)}}
+  .lightning{animation:flash 3s ease-in-out infinite}
+  @keyframes flash{0%,92%,100%{opacity:0}94%{opacity:1}96%{opacity:.2}98%{opacity:.8}}
+  .breathe{animation:breathe 4s ease-in-out infinite}
+  @keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+  @media (prefers-reduced-motion:reduce){
+    .sunspin,.cloudmove,.stormcloud,.bob,.swaytree,.windsway,.creak,.flutter,.birdfly,.sparkle,.raindrop,.prowl,.lightning,.breathe{animation:none}
+  }
+
+  .listen-btn{
+    display:inline-flex;align-items:center;gap:8px;
+    margin-top:14px;padding:10px 22px;
+    font-family:'Baloo Thambi 2',cursive;font-size:1.05rem;font-weight:700;
+    color:#fff;background:var(--sage);border:none;border-radius:999px;
+    box-shadow:0 4px 0 var(--deepsage);cursor:pointer;
+    transition:transform .1s ease;
+  }
+  .listen-btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--deepsage)}
+  .listen-btn.speaking{background:#e05a5a;box-shadow:0 4px 0 #a83a3a}
+  .listen-btn:focus-visible{outline:3px solid #ffd93c;outline-offset:3px}
+  .listen-btn[hidden]{display:none}
+
+  .nav-dots{position:fixed;right:10px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:50}
+  .nav-dots a{width:11px;height:11px;border-radius:50%;background:rgba(255,255,255,.7);border:2px solid rgba(0,0,0,.25);transition:transform .15s ease,background .15s ease}
+  .nav-dots a.active{background:var(--sage);transform:scale(1.35);border-color:var(--deepsage)}
+  .nav-dots a:focus-visible{outline:3px solid #ffd93c;outline-offset:2px}
+  .nav-arrows{position:fixed;bottom:14px;right:14px;display:flex;gap:10px;z-index:50}
+  .nav-arrows button{width:52px;height:52px;border-radius:50%;border:none;cursor:pointer;font-size:1.5rem;background:#fff;color:var(--deepsage);box-shadow:0 4px 12px rgba(0,0,0,.22);transition:transform .1s ease}
+  .nav-arrows button:active{transform:scale(.92)}
+  .nav-arrows button:focus-visible{outline:3px solid #ffd93c;outline-offset:2px}
+
+  .home-btn{position:fixed;top:14px;right:14px;z-index:50;display:inline-flex;align-items:center;justify-content:center;width:48px;height:48px;border-radius:50%;background:#fff;color:var(--deepsage);text-decoration:none;font-size:1.35rem;box-shadow:0 4px 12px rgba(0,0,0,.22);transition:transform .1s ease}
+  .home-btn:active{transform:scale(.92)}
+  .home-btn:focus-visible{outline:3px solid #ffd93c;outline-offset:2px}
+  .lang-btn{position:fixed;top:14px;right:70px;z-index:50;display:inline-flex;align-items:center;justify-content:center;height:48px;border-radius:999px;background:#fff;color:var(--deepsage);text-decoration:none;font-weight:700;font-size:.95rem;padding:0 16px;box-shadow:0 4px 12px rgba(0,0,0,.22);transition:transform .1s ease}
+  .lang-btn:active{transform:scale(.92)}
+  .lang-btn:focus-visible{outline:3px solid #ffd93c;outline-offset:2px}
+</style>
+</head>
+<body>
+
+<a class="home-btn" href="../index-en.html" aria-label="Back to home">🏠</a>
+<a class="lang-btn" href="wise-sage-and-the-storm.html">🇮🇳 தமிழ்</a>
+
+<!-- ================= COVER ================= -->
+<section class="page cover3" id="p0">
+  <svg class="art" viewBox="0 0 560 340" role="img" aria-label="A wise old sage sitting peacefully by his forest hut under a starry twilight sky">
+    <!-- stars -->
+    <g fill="#fff">
+      <path class="sparkle" d="M60 40 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z"/>
+      <path class="sparkle s2" d="M470 34 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z"/>
+      <path class="sparkle s3" d="M280 20 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z"/>
+      <path class="sparkle" d="M150 70 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z"/>
+      <path class="sparkle s2" d="M400 90 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z"/>
+    </g>
+    <!-- moon -->
+    <circle cx="470" cy="70" r="34" fill="#fff2d0" opacity=".95"/>
+    <circle cx="458" cy="60" r="6" fill="#f2d99a" opacity=".6"/>
+    <circle cx="480" cy="82" r="4" fill="#f2d99a" opacity=".6"/>
+    <!-- hills -->
+    <ellipse cx="130" cy="330" rx="260" ry="90" fill="#2f5233"/>
+    <ellipse cx="440" cy="340" rx="280" ry="100" fill="#254226"/>
+    <!-- trees -->
+    <g class="swaytree">
+      <line x1="70" y1="300" x2="70" y2="230" stroke="#3a2b1e" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="70" cy="215" rx="42" ry="38" fill="#2f5233"/>
+    </g>
+    <g class="swaytree" style="animation-delay:1s">
+      <line x1="500" y1="308" x2="500" y2="248" stroke="#3a2b1e" stroke-width="7" stroke-linecap="round"/>
+      <ellipse cx="500" cy="234" rx="34" ry="30" fill="#2f5233"/>
+    </g>
+    <!-- little hut with glowing window -->
+    <g>
+      <rect x="330" y="230" width="90" height="66" rx="6" fill="#5a4632" stroke="#3a2b1e" stroke-width="4"/>
+      <path d="M320 232 L375 194 L430 232 Z" fill="#8a5a2b" stroke="#3a2b1e" stroke-width="4"/>
+      <rect x="358" y="256" width="22" height="40" rx="3" fill="#3a2b1e"/>
+      <rect x="336" y="242" width="20" height="20" rx="3" fill="#ffd98a"/>
+    </g>
+    <!-- sage sitting cross-legged, peaceful -->
+    <g class="bob" style="animation-duration:5s">
+      <path d="M198 236 q-30 0 -30 30 v20 h60 v-20 q0 -30 -30 -30 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <path d="M158 286 q40 18 80 0 v10 q-40 16 -80 0 Z" fill="#c96f1e" stroke="#a85f1e" stroke-width="3"/>
+      <circle cx="198" cy="210" r="24" fill="#e8b888"/>
+      <path d="M176 206 a22 20 0 0 1 44 0 q-2 -18 -22 -18 q-20 0 -22 18 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M180 222 q18 14 36 0 q-2 12 -18 14 q-16 -2 -18 -14 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <circle cx="190" cy="204" r="2.6" fill="#2b2320"/><circle cx="206" cy="204" r="2.6" fill="#2b2320"/>
+      <path d="M198 180 a8 6 0 0 1 8 6" fill="none" stroke="#f2d99a" stroke-width="4" stroke-linecap="round"/>
+      <!-- wrist watch hint -->
+      <circle cx="163" cy="270" r="6" fill="#fff" stroke="#a85f1e" stroke-width="2"/>
+      <line x1="163" y1="270" x2="163" y2="266" stroke="#2b2320" stroke-width="1.4"/>
+      <line x1="163" y1="270" x2="166" y2="270" stroke="#2b2320" stroke-width="1.4"/>
+    </g>
+  </svg>
+  <h1>The Wise Sage and the Storm</h1>
+  <p class="sub">A Story of Calm and Courage 🌙</p>
+  <p class="dedication">For Shriya ❤️</p>
+  <p class="hint">Scroll down ⬇️</p>
+</section>
+
+<!-- ================= SCENE 1 ================= -->
+<section class="page home1" id="p1">
+  <span class="pagenum">1</span>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="The sage's hut in the forest, birds singing, a watch ticking on his wrist">
+    <g class="sunspin">
+      <g stroke="#ffc93c" stroke-width="6" stroke-linecap="round">
+        <line x1="70" y1="12" x2="70" y2="26"/><line x1="70" y1="94" x2="70" y2="108"/>
+        <line x1="22" y1="60" x2="36" y2="60"/><line x1="104" y1="60" x2="118" y2="60"/>
+        <line x1="36" y1="26" x2="46" y2="36"/><line x1="94" y1="84" x2="104" y2="94"/>
+        <line x1="104" y1="26" x2="94" y2="36"/><line x1="46" y1="84" x2="36" y2="94"/>
+      </g>
+    </g>
+    <circle cx="70" cy="60" r="30" fill="#ffc93c"/>
+    <circle cx="61" cy="55" r="3.5" fill="#8a5a00"/><circle cx="79" cy="55" r="3.5" fill="#8a5a00"/>
+    <path d="M60 68 q10 9 20 0" stroke="#8a5a00" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <g class="birdfly" stroke="#3c5a7c" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M300 50 q8 -10 16 0 q8 -10 16 0"/>
+      <path d="M360 34 q7 -9 14 0 q7 -9 14 0"/>
+    </g>
+    <ellipse cx="280" cy="372" rx="320" ry="88" fill="#8cc963"/>
+    <g class="swaytree">
+      <line x1="90" y1="330" x2="90" y2="230" stroke="#8a5a2b" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="90" cy="210" rx="52" ry="46" fill="#3f8f3f"/>
+      <ellipse cx="60" cy="180" rx="26" ry="24" fill="#4fa14f"/>
+    </g>
+    <g class="swaytree" style="animation-delay:1.2s">
+      <line x1="500" y1="336" x2="500" y2="256" stroke="#8a5a2b" stroke-width="8" stroke-linecap="round"/>
+      <ellipse cx="500" cy="238" rx="40" ry="36" fill="#4fa14f"/>
+    </g>
+    <!-- hut -->
+    <g>
+      <rect x="230" y="220" width="140" height="120" rx="6" fill="#c9a06a" stroke="#8a5a2b" stroke-width="5"/>
+      <path d="M216 222 L300 150 L384 222 Z" fill="#8a5a2b" stroke="#5a3d1e" stroke-width="5"/>
+      <rect x="285" y="268" width="40" height="72" rx="4" fill="#5a3d1e"/>
+      <rect x="244" y="244" width="30" height="30" rx="4" fill="#bfe9f7" stroke="#8a5a2b" stroke-width="3"/>
+      <line x1="259" y1="244" x2="259" y2="274" stroke="#8a5a2b" stroke-width="3"/>
+      <line x1="244" y1="259" x2="274" y2="259" stroke="#8a5a2b" stroke-width="3"/>
+    </g>
+    <!-- bird on roof chirping -->
+    <g class="bob" style="animation-duration:2s">
+      <ellipse cx="340" cy="180" rx="12" ry="9" fill="#e8892f"/>
+      <circle cx="350" cy="172" r="6" fill="#e8892f"/>
+      <path d="M357 172 l7 2 l-7 2 Z" fill="#ffc93c"/>
+      <circle cx="352" cy="170" r="1.6" fill="#2b2320"/>
+      <text x="378" y="164" font-family="'Baloo Thambi 2',cursive" font-size="14" fill="#8a5222">Chirp chirp!</text>
+    </g>
+    <!-- sage sitting near hut with watch -->
+    <g>
+      <path d="M170 300 q-28 0 -28 28 v18 h56 v-18 q0 -28 -28 -28 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <path d="M132 346 q38 16 76 0 v8 q-38 14 -76 0 Z" fill="#c96f1e" stroke="#a85f1e" stroke-width="3"/>
+      <circle cx="170" cy="276" r="23" fill="#e8b888"/>
+      <path d="M149 272 a21 19 0 0 1 42 0 q-2 -17 -21 -17 q-19 0 -21 17 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M153 288 q17 13 34 0 q-2 11 -17 13 q-15 -2 -17 -13 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <circle cx="162" cy="270" r="2.4" fill="#2b2320"/><circle cx="177" cy="270" r="2.4" fill="#2b2320"/>
+      <!-- arm with watch -->
+      <line x1="192" y1="298" x2="214" y2="312" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="216" cy="314" r="7" fill="#fff" stroke="#a85f1e" stroke-width="2.5"/>
+      <line x1="216" y1="314" x2="216" y2="309" stroke="#2b2320" stroke-width="1.6"/>
+      <line x1="216" y1="314" x2="220" y2="314" stroke="#2b2320" stroke-width="1.6"/>
+      <text x="246" y="316" font-family="'Baloo Thambi 2',cursive" font-size="14" fill="#8a5222">Tick tock!</text>
+    </g>
+  </svg>
+  <div class="text-card">
+    Once upon a time, long, long ago, there was a kind old sage. He lived in a little hut in the forest, with a big wooden door. He wore a special watch on his wrist. <b>Tick tock, tick tock!</b> Birds sang outside his window every morning. <b>Chirp chirp!</b>
+  </div>
+  <button class="listen-btn" data-listen>🔊 Listen to the story</button>
+</section>
+
+<!-- ================= SCENE 2 ================= -->
+<section class="page storm2" id="p2">
+  <span class="pagenum">2</span>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="A stormy evening: wind, swaying trees, rustling leaves, and a creaking door">
+    <path class="lightning" d="M340 20 l-30 70 24 0 -34 90 60 -100 -26 0 Z" fill="#ffe9a0"/>
+    <g class="stormcloud" opacity=".92">
+      <ellipse cx="140" cy="60" rx="60" ry="26" fill="#3a4260"/><ellipse cx="190" cy="48" rx="50" ry="24" fill="#3a4260"/>
+      <ellipse cx="90" cy="52" rx="40" ry="20" fill="#3a4260"/>
+    </g>
+    <g class="stormcloud" style="animation-delay:.6s" opacity=".85">
+      <ellipse cx="440" cy="76" rx="58" ry="24" fill="#3a4260"/><ellipse cx="480" cy="64" rx="42" ry="20" fill="#3a4260"/>
+    </g>
+    <ellipse cx="280" cy="378" rx="320" ry="84" fill="#3d4664"/>
+    <!-- windswept trees -->
+    <g class="windsway">
+      <line x1="110" y1="340" x2="110" y2="240" stroke="#2a2035" stroke-width="10" stroke-linecap="round"/>
+      <ellipse cx="110" cy="220" rx="48" ry="42" fill="#243a2e"/>
+    </g>
+    <g class="windsway" style="animation-delay:.3s">
+      <line x1="470" y1="346" x2="470" y2="260" stroke="#2a2035" stroke-width="9" stroke-linecap="round"/>
+      <ellipse cx="470" cy="240" rx="42" ry="38" fill="#243a2e"/>
+    </g>
+    <!-- flying leaves -->
+    <g fill="#5a7a4a">
+      <ellipse class="flutter" cx="200" cy="150" rx="10" ry="6"/>
+      <ellipse class="flutter" style="animation-delay:1s" cx="340" cy="180" rx="8" ry="5"/>
+      <ellipse class="flutter" style="animation-delay:2s" cx="260" cy="120" rx="9" ry="5.5"/>
+    </g>
+    <!-- wind streaks -->
+    <g stroke="#c9d4ea" stroke-width="3" fill="none" opacity=".5" stroke-linecap="round">
+      <path d="M40 200 q60 -14 120 0"/>
+      <path d="M380 230 q60 -14 120 0"/>
+    </g>
+    <!-- hut with creaking door -->
+    <g>
+      <rect x="230" y="240" width="140" height="110" rx="6" fill="#4a3a2a" stroke="#1e150c" stroke-width="5"/>
+      <path d="M216 242 L300 172 L384 242 Z" fill="#2a1f14" stroke="#1e150c" stroke-width="5"/>
+      <rect x="242" y="262" width="28" height="28" rx="4" fill="#8a9ac0" stroke="#1e150c" stroke-width="3"/>
+      <g class="creak">
+        <rect x="285" y="286" width="40" height="64" rx="4" fill="#5a3d1e" stroke="#1e150c" stroke-width="3"/>
+        <circle cx="316" cy="318" r="3" fill="#1e150c"/>
+      </g>
+    </g>
+    <!-- sage standing calm, breathing -->
+    <g class="breathe">
+      <path d="M480 260 q-24 0 -24 24 v56 q24 10 48 0 v-56 q0 -24 -24 -24 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <line x1="458" y1="272" x2="440" y2="256" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <line x1="502" y1="272" x2="520" y2="256" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="480" cy="236" r="22" fill="#e8b888"/>
+      <path d="M460 232 a20 18 0 0 1 40 0 q-2 -16 -20 -16 q-18 0 -20 16 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M463 248 q17 12 34 0 q-2 10 -17 12 q-15 -2 -17 -12 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M470 230 q10 -5 20 0" stroke="#2b2320" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <div class="text-card">
+    One evening, the wind went <b>WHOOSH!</b> The trees swayed side to side. The leaves went <b>rustle rustle!</b> The big door went <b>creak creak!</b> "Oh my!" said the sage. But he did not cry. He took a deep breath — in and out — and stayed calm.
+  </div>
+  <button class="listen-btn" data-listen>🔊 Listen to the story</button>
+</section>
+
+<!-- ================= SCENE 3 ================= -->
+<section class="page mountain3" id="p3">
+  <span class="pagenum">3</span>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="The sage climbing a tall mountain to a cozy cave while rain falls outside">
+    <circle cx="470" cy="60" r="26" fill="#e0d4f0" opacity=".8"/>
+    <g class="stormcloud" opacity=".7">
+      <ellipse cx="150" cy="70" rx="50" ry="20" fill="#4a3f6a"/><ellipse cx="200" cy="60" rx="36" ry="16" fill="#4a3f6a"/>
+    </g>
+    <!-- mountain -->
+    <path d="M0 380 L160 120 L240 240 L320 90 L440 260 L520 190 L560 380 Z" fill="#5c4a80" stroke="#3a2f5c" stroke-width="4"/>
+    <path d="M300 130 L320 90 L340 130 Z" fill="#e0d4f0"/>
+    <path d="M120 200 L160 120 L200 200 Z" fill="#e0d4f0"/>
+    <!-- winding path with footprints -->
+    <path d="M60 380 Q140 320 200 300 Q260 280 300 220" stroke="#c9b8e0" stroke-width="14" fill="none" stroke-linecap="round" opacity=".7"/>
+    <g fill="#8a76a8" opacity=".8">
+      <ellipse cx="110" cy="352" rx="5" ry="8" transform="rotate(25 110 352)"/>
+      <ellipse cx="150" cy="330" rx="5" ry="8" transform="rotate(25 150 330)"/>
+      <ellipse cx="200" cy="300" rx="5" ry="8" transform="rotate(15 200 300)"/>
+      <ellipse cx="250" cy="260" rx="5" ry="8" transform="rotate(5 250 260)"/>
+    </g>
+    <!-- cave -->
+    <path d="M300 220 q40 -60 100 -40 q30 10 20 50 q-10 30 -60 30 q-50 0 -60 -40 Z" fill="#241a3f"/>
+    <!-- rain -->
+    <g stroke="#c9d4ea" stroke-width="4" stroke-linecap="round" opacity=".8">
+      <line class="raindrop" x1="70" y1="0" x2="60" y2="30"/>
+      <line class="raindrop d2" x1="130" y1="0" x2="120" y2="30"/>
+      <line class="raindrop d3" x1="190" y1="0" x2="180" y2="30"/>
+      <line class="raindrop" x1="440" y1="0" x2="430" y2="30"/>
+      <line class="raindrop d2" x1="500" y1="0" x2="490" y2="30"/>
+    </g>
+    <!-- sage curled up cozy in the cave -->
+    <g class="bob" style="animation-duration:4s">
+      <ellipse cx="360" cy="238" rx="34" ry="24" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <circle cx="336" cy="222" r="16" fill="#e8b888"/>
+      <path d="M322 218 a14 12 0 0 1 28 0 q-1 -11 -14 -11 q-13 0 -14 11 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M324 230 q12 8 24 0 q-1 7 -12 8 q-11 -1 -12 -8 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M330 218 q6 -4 12 0" stroke="#2b2320" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M330 250 q30 14 60 0" stroke="#c96f1e" stroke-width="3" fill="none" stroke-linecap="round"/>
+    </g>
+  </svg>
+  <div class="text-card">
+    The sage walked, and walked, and walked, all the way up a big, tall mountain. <b>Step, step, step!</b> At last, he found a cozy little cave. "Just right for me!" he smiled. He curled up safe and warm inside, and the rain went <b>pitter patter</b> outside.
+  </div>
+  <button class="listen-btn" data-listen>🔊 Listen to the story</button>
+</section>
+
+<!-- ================= SCENE 4 ================= -->
+<section class="page tiger4" id="p4">
+  <span class="pagenum">4</span>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="A tiger walking through the forest while the sage stands perfectly still like a statue">
+    <ellipse cx="280" cy="380" rx="320" ry="84" fill="#1d331f"/>
+    <g opacity=".9">
+      <ellipse cx="80" cy="300" rx="60" ry="90" fill="#152618"/>
+      <ellipse cx="500" cy="300" rx="60" ry="90" fill="#152618"/>
+      <ellipse cx="250" cy="330" rx="46" ry="70" fill="#1d3320"/>
+    </g>
+    <g fill="#fff" opacity=".6">
+      <path class="sparkle" d="M60 40 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z"/>
+      <path class="sparkle s2" d="M480 60 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z"/>
+    </g>
+    <!-- sage standing perfectly still (no animation = statue-still) -->
+    <g>
+      <path d="M180 260 q-24 0 -24 24 v66 q24 10 48 0 v-66 q0 -24 -24 -24 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <line x1="158" y1="270" x2="150" y2="320" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <line x1="202" y1="270" x2="210" y2="320" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="180" cy="236" r="22" fill="#e8b888"/>
+      <path d="M160 232 a20 18 0 0 1 40 0 q-2 -16 -20 -16 q-18 0 -20 16 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M163 248 q17 12 34 0 q-2 10 -17 12 q-15 -2 -17 -12 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <circle cx="172" cy="230" r="3" fill="#2b2320"/><circle cx="188" cy="230" r="3" fill="#2b2320"/>
+      <line x1="150" y1="320" x2="150" y2="340" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <line x1="210" y1="320" x2="210" y2="340" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+    </g>
+    <!-- tiger prowling by -->
+    <g class="prowl">
+      <ellipse cx="380" cy="330" rx="70" ry="34" fill="#e8892f"/>
+      <path d="M320 320 q20 -10 40 0 M350 315 q20 -10 40 0 M380 312 q20 -10 40 0" stroke="#2b2320" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <circle cx="440" cy="308" r="30" fill="#e8892f"/>
+      <path d="M420 288 l-10 -18 14 6 Z" fill="#e8892f"/><path d="M456 288 l10 -18 -14 6 Z" fill="#e8892f"/>
+      <ellipse cx="448" cy="316" rx="14" ry="10" fill="#fff2e0"/>
+      <circle cx="432" cy="300" r="3.4" fill="#2b2320"/><circle cx="452" cy="298" r="3.4" fill="#2b2320"/>
+      <path d="M448 308 q3 4 0 7" stroke="#2b2320" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M440 312 l-14 -3 M440 314 l-14 3 M456 312 l14 -3 M456 314 l14 3" stroke="#2b2320" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M320 336 q-24 6 -34 -8" stroke="#e8892f" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <!-- sniff lines -->
+      <path d="M462 292 q6 -4 4 -10 M470 296 q6 -2 6 -8" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" opacity=".7"/>
+    </g>
+  </svg>
+  <div class="text-card">
+    In the forest, a big tiger walked by. <b>Soft paws, swishy tail.</b> The sage stood very, very still — like a statue! Not a wiggle, not a giggle. Shhh... The tiger sniffed the air, then walked away. Phew!
+  </div>
+  <button class="listen-btn" data-listen>🔊 Listen to the story</button>
+</section>
+
+<!-- ================= SCENE 5 ================= -->
+<section class="page sunny5" id="p5">
+  <span class="pagenum">5</span>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="A sunny morning: the storm has passed, birds sing, and the sage walks happily home">
+    <g fill="none" stroke-linecap="round">
+      <path d="M60 300 A220 220 0 0 1 500 300" stroke="#ff9d3c" stroke-width="12"/>
+      <path d="M78 300 A202 202 0 0 1 482 300" stroke="#ffd93c" stroke-width="12"/>
+      <path d="M96 300 A184 184 0 0 1 464 300" stroke="#6cc24a" stroke-width="12"/>
+    </g>
+    <g class="sunspin">
+      <g stroke="#ffc93c" stroke-width="6" stroke-linecap="round">
+        <line x1="440" y1="42" x2="440" y2="56"/><line x1="440" y1="124" x2="440" y2="138"/>
+        <line x1="392" y1="90" x2="406" y2="90"/><line x1="474" y1="90" x2="488" y2="90"/>
+        <line x1="406" y1="56" x2="416" y2="66"/><line x1="464" y1="114" x2="474" y2="124"/>
+        <line x1="474" y1="56" x2="464" y2="66"/><line x1="416" y1="114" x2="406" y2="124"/>
+      </g>
+    </g>
+    <circle cx="440" cy="90" r="30" fill="#ffc93c"/>
+    <circle cx="431" cy="85" r="3.5" fill="#8a5a00"/><circle cx="449" cy="85" r="3.5" fill="#8a5a00"/>
+    <path d="M430 98 q10 9 20 0" stroke="#8a5a00" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <g class="birdfly" stroke="#3c5a7c" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M120 60 q8 -10 16 0 q8 -10 16 0"/>
+      <path d="M180 90 q7 -9 14 0 q7 -9 14 0"/>
+    </g>
+    <ellipse cx="280" cy="376" rx="320" ry="86" fill="#8cc963"/>
+    <!-- hut in background -->
+    <g>
+      <rect x="60" y="270" width="90" height="76" rx="6" fill="#c9a06a" stroke="#8a5a2b" stroke-width="4"/>
+      <path d="M50 272 L105 224 L160 272 Z" fill="#8a5a2b" stroke="#5a3d1e" stroke-width="4"/>
+      <rect x="94" y="304" width="26" height="42" rx="3" fill="#5a3d1e"/>
+      <rect x="70" y="286" width="16" height="16" rx="2" fill="#ffd98a"/>
+    </g>
+    <!-- flowers -->
+    <g>
+      <g transform="translate(210 360)"><circle r="5" fill="#ffd93c"/><g fill="#ff8fb1"><circle cx="0" cy="-9" r="5"/><circle cx="8" cy="-4" r="5"/><circle cx="8" cy="5" r="5"/><circle cx="0" cy="9" r="5"/><circle cx="-8" cy="5" r="5"/><circle cx="-8" cy="-4" r="5"/></g></g>
+    </g>
+    <!-- sage walking home happily -->
+    <g class="bob" style="animation-duration:1.4s">
+      <path d="M330 268 q-26 0 -26 26 v58 q26 10 52 0 v-58 q0 -26 -26 -26 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <line x1="306" y1="280" x2="284" y2="262" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <line x1="354" y1="280" x2="378" y2="262" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <path d="M312 346 q-8 16 -18 20 M348 346 q8 16 6 24" stroke="#e8b888" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <circle cx="330" cy="242" r="23" fill="#e8b888"/>
+      <path d="M309 238 a21 19 0 0 1 42 0 q-2 -17 -21 -17 q-19 0 -21 17 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M313 254 q17 13 34 0 q-2 11 -17 13 q-15 -2 -17 -13 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <circle cx="322" cy="236" r="2.6" fill="#2b2320"/><circle cx="338" cy="236" r="2.6" fill="#2b2320"/>
+      <path d="M320 250 q10 9 20 0" stroke="#2b2320" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="316" cy="246" r="4" fill="#ff9d9d" opacity=".6"/><circle cx="344" cy="246" r="4" fill="#ff9d9d" opacity=".6"/>
+    </g>
+    <!-- footprints -->
+    <g fill="#b98a4a" opacity=".7">
+      <ellipse cx="380" cy="366" rx="5" ry="8" transform="rotate(20 380 366)"/>
+      <ellipse cx="410" cy="356" rx="5" ry="8" transform="rotate(20 410 356)"/>
+    </g>
+  </svg>
+  <div class="text-card">
+    The storm went away. The sun peeked out and said, "Good morning!" The birds sang again. <b>Chirp chirp!</b> The sage walked home, step by step, with a big happy smile. He opened his wooden door — <b>creak</b> — and it was safe and cozy inside.
+  </div>
+  <button class="listen-btn" data-listen>🔊 Listen to the story</button>
+</section>
+
+<!-- ================= MORAL ================= -->
+<section class="page moral6" id="p6">
+  <svg class="art" style="width:min(80vw,340px)" viewBox="0 0 340 260" role="img" aria-label="The sage sitting calm and content outside his hut under a starry sky">
+    <g fill="#fff">
+      <path class="sparkle" d="M40 40 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z"/>
+      <path class="sparkle s2" d="M296 34 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z"/>
+      <path class="sparkle s3" d="M170 16 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z"/>
+    </g>
+    <g class="bob">
+      <path d="M170 128 q-32 0 -32 32 v22 h64 v-22 q0 -32 -32 -32 Z" fill="#fff2d0" stroke="#a85f1e" stroke-width="4"/>
+      <path d="M126 182 q44 20 88 0 v10 q-44 18 -88 0 Z" fill="#ffd8a0" stroke="#a85f1e" stroke-width="3"/>
+      <circle cx="170" cy="100" r="26" fill="#e8b888"/>
+      <path d="M146 96 a24 21 0 0 1 48 0 q-2 -19 -24 -19 q-22 0 -24 19 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M150 114 q20 15 40 0 q-2 13 -20 15 q-18 -2 -20 -15 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M154 96 q16 -8 32 0" stroke="#2b2320" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="170" cy="70" r="8" fill="#e05a5a" opacity=".85"/>
+      <path d="M170 66 l3 5 -3 5 -3 -5 Z" fill="#fff" opacity=".9"/>
+    </g>
+  </svg>
+  <h2 class="moral-title">🌟 The Moral of the Story 🌟</h2>
+  <div class="text-card" style="text-align:center">
+    <b>Stay calm, be brave,</b><br>
+    and everything will be okay.
+  </div>
+  <button class="listen-btn" data-listen>🔊 Listen to the story</button>
+</section>
+
+<nav class="nav-dots" aria-label="Pages">
+  <a href="#p0" aria-label="Cover"></a>
+  <a href="#p1" aria-label="Page 1"></a>
+  <a href="#p2" aria-label="Page 2"></a>
+  <a href="#p3" aria-label="Page 3"></a>
+  <a href="#p4" aria-label="Page 4"></a>
+  <a href="#p5" aria-label="Page 5"></a>
+  <a href="#p6" aria-label="Moral"></a>
+</nav>
+<div class="nav-arrows">
+  <button id="prevBtn" aria-label="Previous page">⬆️</button>
+  <button id="nextBtn" aria-label="Next page">⬇️</button>
+</div>
+
+<script>
+(function(){
+  var pages = Array.prototype.slice.call(document.querySelectorAll('.page'));
+  var dots = Array.prototype.slice.call(document.querySelectorAll('.nav-dots a'));
+
+  var synth = window.speechSynthesis;
+  var buttons = Array.prototype.slice.call(document.querySelectorAll('[data-listen]'));
+  var currentBtn = null;
+
+  function pickVoice(){
+    var voices = synth ? synth.getVoices() : [];
+    return voices.find(function(v){ return /^en/i.test(v.lang); }) ||
+           voices.find(function(v){ return /IN$/i.test(v.lang); }) || null;
+  }
+
+  function resetBtn(btn){
+    btn.classList.remove('speaking');
+    btn.textContent = '🔊 Listen to the story';
+  }
+
+  if(!('speechSynthesis' in window)){
+    buttons.forEach(function(b){ b.hidden = true; });
+  } else {
+    buttons.forEach(function(btn){
+      btn.addEventListener('click', function(){
+        if(currentBtn === btn && synth.speaking){
+          synth.cancel();
+          resetBtn(btn);
+          currentBtn = null;
+          return;
+        }
+        synth.cancel();
+        if(currentBtn) resetBtn(currentBtn);
+
+        var card = btn.parentElement.querySelector('.text-card');
+        var text = card ? card.textContent.replace(/[\u{1F300}-\u{1FAFF}☀-➿]/gu,'').trim() : '';
+        if(!text) return;
+
+        var u = new SpeechSynthesisUtterance(text);
+        u.lang = 'en-IN';
+        u.rate = 0.9;
+        u.pitch = 1.05;
+        var v = pickVoice();
+        if(v) u.voice = v;
+        u.onend = u.onerror = function(){ resetBtn(btn); currentBtn = null; };
+        btn.classList.add('speaking');
+        btn.textContent = '⏹️ Stop';
+        currentBtn = btn;
+        synth.speak(u);
+      });
+    });
+    if(synth.onvoiceschanged !== undefined){
+      synth.onvoiceschanged = function(){};
+    }
+  }
+
+  function currentIndex(){
+    var mid = window.scrollY + window.innerHeight/2;
+    for(var i=0;i<pages.length;i++){
+      var top = pages[i].offsetTop, bottom = top + pages[i].offsetHeight;
+      if(mid >= top && mid < bottom) return i;
+    }
+    return 0;
+  }
+  document.getElementById('prevBtn').addEventListener('click', function(){
+    var i = Math.max(0, currentIndex()-1);
+    pages[i].scrollIntoView({behavior:'smooth'});
+  });
+  document.getElementById('nextBtn').addEventListener('click', function(){
+    var i = Math.min(pages.length-1, currentIndex()+1);
+    pages[i].scrollIntoView({behavior:'smooth'});
+  });
+
+  function updateDots(){
+    var i = currentIndex();
+    dots.forEach(function(d,k){ d.classList.toggle('active', k===i); });
+  }
+  window.addEventListener('scroll', updateDots, {passive:true});
+  updateDots();
+
+  window.addEventListener('pagehide', function(){ if(synth) synth.cancel(); });
+})();
+</script>
+
+</body>
+</html>
