@@ -48,11 +48,15 @@
   .night6 .text-card{background:rgba(255,255,255,.95)}
   .confront7{background:linear-gradient(180deg,#5c6a52 0%,#7a9068 55%,#9ab07a 100%)}
   .confront7 .text-card{background:rgba(255,255,255,.95)}
-  .peace8{background:linear-gradient(180deg,#7a9068 0%,#a8c48a 55%,#ffe0a0 100%)}
-  .peace8 .text-card{background:rgba(255,255,255,.95)}
-  .sunny9{background:linear-gradient(180deg,#aee3f5 0%,#e3f5d0 55%,#ffe9a8 100%)}
-  .moral10{background:linear-gradient(180deg,#e8952f 0%,#f2b45c 60%,#ffd8a0 100%)}
-  .moral10 .text-card{border:4px dashed var(--sage)}
+  .sorry8{background:linear-gradient(180deg,#5c6a52 0%,#8a9c62 55%,#c4b47a 100%)}
+  .sorry8 .text-card{background:rgba(255,255,255,.95)}
+  .friends9{background:linear-gradient(180deg,#8aa06a 0%,#c4d488 55%,#ffe9a8 100%)}
+  .friends9 .text-card{background:rgba(255,255,255,.95)}
+  .staying10{background:linear-gradient(180deg,#ff9d5c 0%,#ffcf7a 55%,#4a3a6a 100%)}
+  .staying10 .text-card{background:rgba(255,255,255,.95)}
+  .reunion11{background:linear-gradient(180deg,#aee3f5 0%,#e3f5d0 55%,#ffe9a8 100%)}
+  .moral12{background:linear-gradient(180deg,#e8952f 0%,#f2b45c 60%,#ffd8a0 100%)}
+  .moral12 .text-card{border:4px dashed var(--sage)}
   .moral-title{font-size:clamp(1.8rem,6vw,2.6rem);color:#fff;font-weight:800;margin-bottom:12px;
     text-shadow:0 3px 0 rgba(0,0,0,.18)}
 
@@ -524,17 +528,16 @@
   <button class="listen-btn" data-listen>🔊 Listen to the story</button>
 </section>
 
-<!-- ================= 8: CALM WORDS ================= -->
-<section class="page peace8" id="p8">
+<!-- ================= 8: SORRY... AND A SNACK ================= -->
+<section class="page sorry8" id="p8">
   <span class="pagenum">8</span>
-  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="The sage bows and speaks calmly, and the tiger's anger softens">
-    <ellipse cx="280" cy="380" rx="320" ry="84" fill="#7a9868"/>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="The sage apologizes and shares his snack with the hungry tiger">
+    <ellipse cx="280" cy="380" rx="320" ry="84" fill="#8a9c62"/>
     <g opacity=".8">
-      <ellipse cx="90" cy="300" rx="60" ry="90" fill="#688252"/>
-      <ellipse cx="500" cy="300" rx="60" ry="90" fill="#688252"/>
+      <ellipse cx="90" cy="300" rx="60" ry="90" fill="#748a52"/>
+      <ellipse cx="500" cy="300" rx="60" ry="90" fill="#748a52"/>
     </g>
-    <path class="sparkle" d="M300 220 l5 12 12 5 -12 5 -5 12 -5 -12 -12 -5 12 -5 Z" fill="#fff2d0"/>
-    <!-- relaxed tiger, sitting -->
+    <!-- tiger sitting, calmer now but tummy rumbling -->
     <g>
       <ellipse cx="400" cy="332" rx="72" ry="34" fill="#e8892f"/>
       <path d="M340 322 q20 -10 40 0 M370 317 q20 -10 40 0 M400 314 q20 -10 40 0" stroke="#2b2320" stroke-width="5" fill="none" stroke-linecap="round"/>
@@ -543,106 +546,205 @@
       <ellipse cx="466" cy="316" rx="12" ry="9" fill="#fff2e0"/>
       <circle cx="450" cy="300" r="3" fill="#2b2320"/><circle cx="468" cy="298" r="3" fill="#2b2320"/>
       <path d="M466 306 q2 4 0 6" stroke="#2b2320" stroke-width="2.2" fill="none" stroke-linecap="round"/>
-      <path d="M448 314 q8 6 16 0" stroke="#2b2320" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M448 316 q6 3 12 0" stroke="#2b2320" stroke-width="2" fill="none" stroke-linecap="round"/>
       <path d="M340 336 q-22 6 -32 -6" stroke="#e8892f" stroke-width="10" fill="none" stroke-linecap="round"/>
+      <!-- rumbling tummy -->
+      <path class="sparkle" d="M395 340 q6 -6 12 0 q6 -6 12 0" stroke="#7a1f1f" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <text x="415" y="290" text-anchor="middle" font-family="'Baloo Thambi 2',cursive" font-size="15" fill="#7a1f1f">Grrrowl!</text>
     </g>
-    <!-- sage bowing gently, hands together -->
-    <g transform="rotate(8 180 305)">
+    <!-- sage bowing, offering food -->
+    <g transform="rotate(6 180 305)">
       <path d="M180 280 q-22 0 -22 22 v50 q22 10 44 0 v-50 q0 -22 -22 -22 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
-      <path d="M170 288 q10 14 20 0" stroke="#e8b888" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <path d="M198 292 q26 4 34 20" stroke="#e8b888" stroke-width="9" fill="none" stroke-linecap="round"/>
+      <ellipse cx="238" cy="316" rx="16" ry="10" fill="#c96f1e" stroke="#8a4a12" stroke-width="2.5"/>
+      <path d="M228 312 a5 4 0 0 0 8 3" fill="#fff2d0"/>
       <circle cx="184" cy="252" r="20" fill="#e8b888"/>
       <path d="M166 248 a18 16 0 0 1 36 0 q-2 -14 -18 -14 q-16 0 -18 14 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
       <path d="M169 262 q15 11 30 0 q-2 9 -15 11 q-13 -2 -15 -11 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
       <path d="M172 246 q6 -3 12 0" stroke="#2b2320" stroke-width="2.2" fill="none" stroke-linecap="round"/>
       <path d="M176 260 q8 6 16 0" stroke="#2b2320" stroke-width="2.4" fill="none" stroke-linecap="round"/>
     </g>
+    <text x="300" y="228" text-anchor="middle" font-family="'Baloo Thambi 2',cursive" font-size="16" fill="#5a4a1e">Munch munch!</text>
   </svg>
   <div class="text-card">
-    The sage bowed gently. <b>"I am sorry, great tiger,"</b> he said softly. "I did not know this was your home. Your cave kept me safe and warm through the storm. Thank you — I will trouble you no more." The tiger blinked, surprised. No fear. No shouting back. Just calm, kind words. Its growl melted away, and it stepped aside to let the sage pass.
+    The sage bowed. <b>"I am sorry, great tiger,"</b> he said. "Your cave kept me warm and dry. Thank you." Just then, the tiger's tummy rumbled. <b>Grrrrowl!</b> "Are you hungry, friend?" The sage opened his bag and shared his sweet potato. <b>Munch, munch!</b>
   </div>
   <button class="listen-btn" data-listen>🔊 Listen to the story</button>
 </section>
 
-<!-- ================= 9: HOME AGAIN ================= -->
-<section class="page sunny9" id="p9">
+<!-- ================= 9: BECOMING FRIENDS ================= -->
+<section class="page friends9" id="p9">
   <span class="pagenum">9</span>
-  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="A sunny morning: with calm words spoken, birds sing, and the sage walks happily home">
-    <g fill="none" stroke-linecap="round">
-      <path d="M60 300 A220 220 0 0 1 500 300" stroke="#ff9d3c" stroke-width="12"/>
-      <path d="M78 300 A202 202 0 0 1 482 300" stroke="#ffd93c" stroke-width="12"/>
-      <path d="M96 300 A184 184 0 0 1 464 300" stroke="#6cc24a" stroke-width="12"/>
-    </g>
-    <g class="sunspin">
-      <g stroke="#ffc93c" stroke-width="6" stroke-linecap="round">
-        <line x1="440" y1="42" x2="440" y2="56"/><line x1="440" y1="124" x2="440" y2="138"/>
-        <line x1="392" y1="90" x2="406" y2="90"/><line x1="474" y1="90" x2="488" y2="90"/>
-        <line x1="406" y1="56" x2="416" y2="66"/><line x1="464" y1="114" x2="474" y2="124"/>
-        <line x1="474" y1="56" x2="464" y2="66"/><line x1="416" y1="114" x2="406" y2="124"/>
-      </g>
-    </g>
-    <circle cx="440" cy="90" r="30" fill="#ffc93c"/>
-    <circle cx="431" cy="85" r="3.5" fill="#8a5a00"/><circle cx="449" cy="85" r="3.5" fill="#8a5a00"/>
-    <path d="M430 98 q10 9 20 0" stroke="#8a5a00" stroke-width="3.5" fill="none" stroke-linecap="round"/>
-    <g class="birdfly" stroke="#3c5a7c" stroke-width="4" fill="none" stroke-linecap="round">
-      <path d="M120 60 q8 -10 16 0 q8 -10 16 0"/>
-      <path d="M180 90 q7 -9 14 0 q7 -9 14 0"/>
-    </g>
-    <ellipse cx="280" cy="376" rx="320" ry="86" fill="#8cc963"/>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="The sage and tiger roll and play together down a grassy hill, becoming fast friends">
+    <ellipse cx="280" cy="376" rx="320" ry="86" fill="#a8c46a"/>
+    <ellipse cx="280" cy="330" rx="280" ry="60" fill="#bcd47e" opacity=".7"/>
     <g>
-      <rect x="60" y="270" width="90" height="76" rx="6" fill="#c9a06a" stroke="#8a5a2b" stroke-width="4"/>
-      <path d="M50 272 L105 224 L160 272 Z" fill="#8a5a2b" stroke="#5a3d1e" stroke-width="4"/>
-      <rect x="94" y="304" width="26" height="42" rx="3" fill="#5a3d1e"/>
-      <rect x="70" y="286" width="16" height="16" rx="2" fill="#ffd98a"/>
+      <g transform="translate(200 356)"><circle r="5" fill="#ffd93c"/><g fill="#ff8fb1"><circle cx="0" cy="-9" r="5"/><circle cx="8" cy="-4" r="5"/><circle cx="8" cy="5" r="5"/><circle cx="0" cy="9" r="5"/><circle cx="-8" cy="5" r="5"/><circle cx="-8" cy="-4" r="5"/></g></g>
+      <g transform="translate(420 344)"><circle r="4" fill="#ffd93c"/><g fill="#c79bf2"><circle cx="0" cy="-7" r="4"/><circle cx="6" cy="-3" r="4"/><circle cx="6" cy="4" r="4"/><circle cx="0" cy="7" r="4"/><circle cx="-6" cy="4" r="4"/><circle cx="-6" cy="-3" r="4"/></g></g>
     </g>
+    <!-- motion swooshes -->
+    <g stroke="#fff" stroke-width="3" fill="none" opacity=".6" stroke-linecap="round">
+      <path d="M120 260 q30 10 60 0"/>
+      <path d="M140 300 q30 10 60 0"/>
+    </g>
+    <!-- tiger mid-roll -->
+    <g transform="rotate(-18 380 300)">
+    <g class="bob" style="animation-duration:1.2s">
+      <ellipse cx="380" cy="300" rx="60" ry="30" fill="#e8892f"/>
+      <path d="M330 292 q16 -8 32 0 M356 288 q16 -8 32 0" stroke="#2b2320" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="428" cy="282" r="24" fill="#e8892f"/>
+      <path d="M412 264 l-8 -14 11 4 Z" fill="#e8892f"/><path d="M442 264 l8 -14 -11 4 Z" fill="#e8892f"/>
+      <ellipse cx="434" cy="288" rx="10" ry="8" fill="#fff2e0"/>
+      <circle cx="420" cy="274" r="2.8" fill="#2b2320"/><circle cx="436" cy="272" r="2.8" fill="#2b2320"/>
+      <path d="M420 280 q7 5 14 0" stroke="#2b2320" stroke-width="2" fill="none" stroke-linecap="round"/>
+    </g>
+    </g>
+    <!-- sage mid-roll, laughing -->
+    <g transform="rotate(16 220 320)">
+    <g class="bob" style="animation-duration:1.2s;animation-delay:.2s">
+      <path d="M220 296 q-20 0 -20 20 v46 q20 8 40 0 v-46 q0 -20 -20 -20 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <circle cx="220" cy="268" r="19" fill="#e8b888"/>
+      <path d="M203 264 a17 15 0 0 1 34 0 q-2 -13 -17 -13 q-15 0 -17 13 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M206 278 q14 10 28 0 q-2 8 -14 10 q-12 -2 -14 -10 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M210 262 q5 -6 0 -10 M228 262 q5 -6 0 -10" stroke="#2b2320" stroke-width="2.2" fill="none" stroke-linecap="round"/>
+      <path d="M208 274 q12 12 24 0" stroke="#2b2320" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    </g>
+    </g>
+    <text x="150" y="200" font-family="'Baloo Thambi 2',cursive" font-size="26" fill="#5a4a1e">Whee!</text>
+  </svg>
+  <div class="text-card">
+    The tiger's eyes went wide and happy. "No one has ever shared with me before," he said shyly. They munched their snack together, then rolled down the grassy hill, laughing. <b>Whee!</b> A tiger and a sage — best friends already!
+  </div>
+  <button class="listen-btn" data-listen>🔊 Listen to the story</button>
+</section>
+
+<!-- ================= 10: CAN I STAY A LITTLE LONGER? ================= -->
+<section class="page staying10" id="p10">
+  <span class="pagenum">10</span>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="The sage and tiger sit together at sunset outside the cave, now the best of friends">
+    <circle cx="440" cy="220" r="60" fill="#ffcf7a"/>
+    <ellipse cx="280" cy="380" rx="320" ry="84" fill="#4a3a6a"/>
+    <g fill="#fff">
+      <path class="sparkle" d="M100 70 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z"/>
+      <path class="sparkle s2" d="M200 50 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z"/>
+    </g>
+    <path d="M300 230 q50 -90 150 -70 q50 12 40 80 q-10 60 -70 110 L340 380 q-70 -70 -40 -150 Z" fill="#241a3f" opacity=".85"/>
+    <!-- tiger sitting content, close to sage -->
     <g>
-      <g transform="translate(210 360)"><circle r="5" fill="#ffd93c"/><g fill="#ff8fb1"><circle cx="0" cy="-9" r="5"/><circle cx="8" cy="-4" r="5"/><circle cx="8" cy="5" r="5"/><circle cx="0" cy="9" r="5"/><circle cx="-8" cy="5" r="5"/><circle cx="-8" cy="-4" r="5"/></g></g>
+      <ellipse cx="360" cy="330" rx="66" ry="32" fill="#e8892f"/>
+      <path d="M304 320 q18 -9 36 0 M330 316 q18 -9 36 0" stroke="#2b2320" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <circle cx="410" cy="304" r="26" fill="#e8892f"/>
+      <path d="M392 286 l-9 -15 12 5 Z" fill="#e8892f"/><path d="M422 286 l9 -15 -12 5 Z" fill="#e8892f"/>
+      <ellipse cx="416" cy="310" rx="11" ry="8" fill="#fff2e0"/>
+      <circle cx="402" cy="296" r="2.8" fill="#2b2320"/><circle cx="418" cy="294" r="2.8" fill="#2b2320"/>
+      <path d="M416 300 q2 4 0 6" stroke="#2b2320" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M304 336 q-18 6 -26 -6" stroke="#e8892f" stroke-width="9" fill="none" stroke-linecap="round"/>
     </g>
-    <g class="bob" style="animation-duration:1.4s">
-      <path d="M330 268 q-26 0 -26 26 v58 q26 10 52 0 v-58 q0 -26 -26 -26 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
-      <line x1="306" y1="280" x2="284" y2="262" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
-      <line x1="354" y1="280" x2="378" y2="262" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
-      <path d="M312 346 q-8 16 -18 20 M348 346 q8 16 6 24" stroke="#e8b888" stroke-width="9" fill="none" stroke-linecap="round"/>
-      <circle cx="330" cy="242" r="23" fill="#e8b888"/>
-      <path d="M309 238 a21 19 0 0 1 42 0 q-2 -17 -21 -17 q-19 0 -21 17 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
-      <path d="M313 254 q17 13 34 0 q-2 11 -17 13 q-15 -2 -17 -13 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
-      <circle cx="322" cy="236" r="2.6" fill="#2b2320"/><circle cx="338" cy="236" r="2.6" fill="#2b2320"/>
-      <path d="M320 250 q10 9 20 0" stroke="#2b2320" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <circle cx="316" cy="246" r="4" fill="#ff9d9d" opacity=".6"/><circle cx="344" cy="246" r="4" fill="#ff9d9d" opacity=".6"/>
-    </g>
-    <g fill="#b98a4a" opacity=".7">
-      <ellipse cx="380" cy="366" rx="5" ry="8" transform="rotate(20 380 366)"/>
-      <ellipse cx="410" cy="356" rx="5" ry="8" transform="rotate(20 410 356)"/>
+    <!-- sage sitting beside, content, hand near tiger paw -->
+    <g>
+      <path d="M220 288 q-24 0 -24 24 v56 q24 10 48 0 v-56 q0 -24 -24 -24 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <path d="M240 320 q30 4 40 12" stroke="#e8b888" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <circle cx="220" cy="254" r="22" fill="#e8b888"/>
+      <path d="M200 250 a20 18 0 0 1 40 0 q-2 -16 -20 -16 q-18 0 -20 16 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M203 266 q17 12 34 0 q-2 10 -17 12 q-15 -2 -17 -12 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M210 248 q6 -3 12 0" stroke="#2b2320" stroke-width="2.4" fill="none" stroke-linecap="round"/>
+      <path d="M212 262 q8 6 16 0" stroke="#2b2320" stroke-width="2.6" fill="none" stroke-linecap="round"/>
     </g>
   </svg>
   <div class="text-card">
-    With calm words spoken, the sage walked on down the mountain. The sun peeked out and said, "Good morning!" The birds sang again. <b>Chirp chirp!</b> The sage walked home, step by step, with a big happy smile. He opened his wooden door — <b>creak</b> — and it was safe and cozy inside.
+    That evening, the sage smiled. <b>"Can I stay a little longer, friend?"</b> he asked. "Of course!" said the tiger happily. "This cave is big enough for two!" They watched the sunset together, side by side, warm and happy.
+  </div>
+  <button class="listen-btn" data-listen>🔊 Listen to the story</button>
+</section>
+
+<!-- ================= 11: HOME, AND BEST FRIENDS FOREVER ================= -->
+<section class="page reunion11" id="p11">
+  <span class="pagenum">11</span>
+  <svg class="art" viewBox="0 0 560 400" role="img" aria-label="The sage returns to his hut, and his new friend the tiger comes to visit">
+    <g class="sunspin">
+      <g stroke="#ffc93c" stroke-width="6" stroke-linecap="round">
+        <line x1="70" y1="12" x2="70" y2="26"/><line x1="70" y1="94" x2="70" y2="108"/>
+        <line x1="22" y1="60" x2="36" y2="60"/><line x1="104" y1="60" x2="118" y2="60"/>
+        <line x1="36" y1="26" x2="46" y2="36"/><line x1="94" y1="84" x2="104" y2="94"/>
+        <line x1="104" y1="26" x2="94" y2="36"/><line x1="46" y1="84" x2="36" y2="94"/>
+      </g>
+    </g>
+    <circle cx="70" cy="60" r="30" fill="#ffc93c"/>
+    <circle cx="61" cy="55" r="3.5" fill="#8a5a00"/><circle cx="79" cy="55" r="3.5" fill="#8a5a00"/>
+    <path d="M60 68 q10 9 20 0" stroke="#8a5a00" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+    <g class="birdfly" stroke="#3c5a7c" stroke-width="4" fill="none" stroke-linecap="round">
+      <path d="M300 50 q8 -10 16 0 q8 -10 16 0"/>
+      <path d="M360 34 q7 -9 14 0 q7 -9 14 0"/>
+    </g>
+    <ellipse cx="280" cy="372" rx="320" ry="88" fill="#8cc963"/>
+    <path d="M60 380 Q200 330 320 340 Q400 346 460 320" stroke="#c9a468" stroke-width="20" fill="none" stroke-linecap="round" opacity=".6"/>
+    <g>
+      <rect x="230" y="220" width="140" height="120" rx="6" fill="#c9a06a" stroke="#8a5a2b" stroke-width="5"/>
+      <path d="M216 222 L300 150 L384 222 Z" fill="#8a5a2b" stroke="#5a3d1e" stroke-width="5"/>
+      <rect x="285" y="268" width="40" height="72" rx="4" fill="#5a3d1e"/>
+      <rect x="244" y="244" width="30" height="30" rx="4" fill="#bfe9f7" stroke="#8a5a2b" stroke-width="3"/>
+    </g>
+    <!-- sage standing at his door, waving happily -->
+    <g>
+      <path d="M175 300 q-24 0 -24 24 v40 h48 v-40 q0 -24 -24 -24 Z" fill="#e8952f" stroke="#a85f1e" stroke-width="4"/>
+      <line x1="196" y1="308" x2="216" y2="284" stroke="#e8b888" stroke-width="8" stroke-linecap="round"/>
+      <circle cx="175" cy="276" r="20" fill="#e8b888"/>
+      <path d="M157 272 a18 16 0 0 1 36 0 q-2 -14 -18 -14 q-16 0 -18 14 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M160 286 q15 11 30 0 q-2 9 -15 11 q-13 -2 -15 -11 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <circle cx="167" cy="270" r="2.4" fill="#2b2320"/><circle cx="182" cy="270" r="2.4" fill="#2b2320"/>
+      <path d="M165 282 q10 7 20 0" stroke="#2b2320" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    </g>
+    <!-- tiger walking up the path to visit -->
+    <g class="bob" style="animation-duration:1.6s">
+      <ellipse cx="450" cy="352" rx="50" ry="24" fill="#e8892f"/>
+      <path d="M410 344 q14 -7 28 0 M430 340 q14 -7 28 0" stroke="#2b2320" stroke-width="4" fill="none" stroke-linecap="round"/>
+      <circle cx="488" cy="332" r="20" fill="#e8892f"/>
+      <path d="M474 318 l-7 -12 10 4 Z" fill="#e8892f"/><path d="M500 318 l7 -12 -10 4 Z" fill="#e8892f"/>
+      <ellipse cx="494" cy="336" rx="9" ry="7" fill="#fff2e0"/>
+      <circle cx="482" cy="326" r="2.6" fill="#2b2320"/><circle cx="496" cy="324" r="2.6" fill="#2b2320"/>
+      <path d="M494 330 q6 5 12 0" stroke="#2b2320" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M412 358 q-16 5 -22 -6" stroke="#e8892f" stroke-width="8" fill="none" stroke-linecap="round"/>
+    </g>
+    <text x="470" y="392" text-anchor="middle" font-family="'Baloo Thambi 2',cursive" font-size="15" fill="#5a4a1e">Thump, thump!</text>
+  </svg>
+  <div class="text-card">
+    The next morning, the sage hugged his new friend goodbye. "I must go home now," he said, "but I will visit you every single day!" And he did. From then on, every evening, <b>thump, thump, thump</b> — happy tiger paws came up the path to the little hut for a visit.
   </div>
   <button class="listen-btn" data-listen>🔊 Listen to the story</button>
 </section>
 
 <!-- ================= MORAL ================= -->
-<section class="page moral10" id="p10">
-  <svg class="art" style="width:min(80vw,340px)" viewBox="0 0 340 260" role="img" aria-label="The sage sitting calm and content outside his hut under a starry sky">
+<section class="page moral12" id="p12">
+  <svg class="art" style="width:min(80vw,340px)" viewBox="0 0 340 260" role="img" aria-label="The sage and his friend the tiger sitting together content under a starry sky">
     <g fill="#fff">
       <path class="sparkle" d="M40 40 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z"/>
       <path class="sparkle s2" d="M296 34 l4 10 10 4 -10 4 -4 10 -4 -10 -10 -4 10 -4 Z"/>
       <path class="sparkle s3" d="M170 16 l3 8 8 3 -8 3 -3 8 -3 -8 -8 -3 8 -3 Z"/>
     </g>
     <g class="bob">
-      <path d="M170 128 q-32 0 -32 32 v22 h64 v-22 q0 -32 -32 -32 Z" fill="#fff2d0" stroke="#a85f1e" stroke-width="4"/>
-      <path d="M126 182 q44 20 88 0 v10 q-44 18 -88 0 Z" fill="#ffd8a0" stroke="#a85f1e" stroke-width="3"/>
-      <circle cx="170" cy="100" r="26" fill="#e8b888"/>
-      <path d="M146 96 a24 21 0 0 1 48 0 q-2 -19 -24 -19 q-22 0 -24 19 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
-      <path d="M150 114 q20 15 40 0 q-2 13 -20 15 q-18 -2 -20 -15 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
-      <path d="M154 96 q16 -8 32 0" stroke="#2b2320" stroke-width="3" fill="none" stroke-linecap="round"/>
-      <circle cx="170" cy="70" r="8" fill="#e05a5a" opacity=".85"/>
-      <path d="M170 66 l3 5 -3 5 -3 -5 Z" fill="#fff" opacity=".9"/>
+      <path d="M144 128 q-30 0 -30 30 v24 h60 v-24 q0 -30 -30 -30 Z" fill="#fff2d0" stroke="#a85f1e" stroke-width="4"/>
+      <path d="M102 182 q42 18 84 0 v10 q-42 16 -84 0 Z" fill="#ffd8a0" stroke="#a85f1e" stroke-width="3"/>
+      <circle cx="144" cy="102" r="24" fill="#e8b888"/>
+      <path d="M122 98 a22 19 0 0 1 44 0 q-2 -17 -22 -17 q-20 0 -22 17 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M126 116 q18 14 36 0 q-2 12 -18 14 q-16 -2 -18 -14 Z" fill="#fff" stroke="#e2ddd0" stroke-width="2"/>
+      <path d="M130 98 q14 -7 28 0" stroke="#2b2320" stroke-width="3" fill="none" stroke-linecap="round"/>
+      <circle cx="144" cy="72" r="8" fill="#e05a5a" opacity=".85"/>
+      <path d="M144 68 l3 5 -3 5 -3 -5 Z" fill="#fff" opacity=".9"/>
+    </g>
+    <g class="bob" style="animation-delay:.4s">
+      <ellipse cx="236" cy="196" rx="42" ry="22" fill="#e8892f"/>
+      <path d="M198 188 q12 -6 24 0 M216 184 q12 -6 24 0" stroke="#2b2320" stroke-width="3.4" fill="none" stroke-linecap="round"/>
+      <circle cx="270" cy="176" r="17" fill="#e8892f"/>
+      <path d="M258 162 l-6 -11 8 4 Z" fill="#e8892f"/><path d="M282 162 l6 -11 -8 4 Z" fill="#e8892f"/>
+      <ellipse cx="276" cy="180" rx="7.5" ry="6" fill="#fff2e0"/>
+      <circle cx="264" cy="170" r="2.2" fill="#2b2320"/><circle cx="277" cy="169" r="2.2" fill="#2b2320"/>
+      <path d="M198 200 q-13 4 -19 -5" stroke="#e8892f" stroke-width="7" fill="none" stroke-linecap="round"/>
     </g>
   </svg>
   <h2 class="moral-title">🌟 The Moral of the Story 🌟</h2>
   <div class="text-card" style="text-align:center">
-    <b>Stay calm, be brave,</b><br>
-    and everything will be okay.
+    <b>A little kindness can turn even a scary stranger into your best friend.</b><br>
+    Stay calm, be kind — and you'll never run out of friends. 🐯🧡
   </div>
   <button class="listen-btn" data-listen>🔊 Listen to the story</button>
 </section>
@@ -658,7 +760,9 @@
   <a href="#p7" aria-label="Page 7"></a>
   <a href="#p8" aria-label="Page 8"></a>
   <a href="#p9" aria-label="Page 9"></a>
-  <a href="#p10" aria-label="Moral"></a>
+  <a href="#p10" aria-label="Page 10"></a>
+  <a href="#p11" aria-label="Page 11"></a>
+  <a href="#p12" aria-label="Moral"></a>
 </nav>
 <div class="nav-arrows">
   <button id="prevBtn" aria-label="Previous page">⬆️</button>
